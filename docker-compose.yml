@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: alexandria_app
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app/src
+    command: python src/app/main.py
